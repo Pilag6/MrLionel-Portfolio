@@ -1,8 +1,8 @@
-
 :root {
-    --color-Messi: #5984BE;
+    --color-Messi: #5984be;
     --Messi-Bg: #666666;
     --Messi-Copy: #efefef;
+    --Messi-Subtitle: #aeacab;
 }
 
 body,
@@ -48,23 +48,27 @@ html {
     display: block;
     width: 100%;
     height: 6rem;
-
 }
 
 .menu-hamburger {
     position: absolute;
     background: #fff;
-    padding: .3rem 0.5rem;
+    padding: 0.3rem 0.5rem;
     line-height: 1;
-
+    cursor: pointer;
 }
 
 .menu-hamburger i {
-    font-size: 12px;
+    font-size: 2rem;
+}
+
+.menu-hamburger i:hover {
+    color: var(--color-Messi);
 }
 
 .menu-txt {
     position: absolute;
+    top: 7px;
     display: inline-block;
     margin-left: 2.5rem;
     margin-top: -0.08rem;
@@ -80,7 +84,6 @@ html {
 }
 
 .logo {
-    display: block;
     font-size: 2rem;
     font-weight: 600;
     margin-top: 3rem;
@@ -88,11 +91,12 @@ html {
     color: black;
     background: #fff;
     padding: 1rem 2rem;
+    cursor: pointer;
 }
 
-/* .logo span {
-    display: block;
-} */
+.logo:hover {
+    color: var(--color-Messi);
+}
 
 .number-wrapper {
     position: absolute;
@@ -113,7 +117,7 @@ html {
     font-family: "Montserrat", sans-serif;
     font-size: 12rem;
     color: var(--Messi-Copy);
-    margin-left: -5rem;
+    margin-left: -4.5rem;
     font-weight: 700;
 }
 
@@ -121,7 +125,6 @@ html {
     position: absolute;
     height: 100%;
     width: 12rem;
-    padding: 0 4rem;
     top: 0;
     right: 0;
     text-align: center;
@@ -181,7 +184,7 @@ html {
     background-color: #fff;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0 0 35px 20px rgba(79, 69, 55, 0.2);
+    box-shadow: 0 0 20px 10px rgba(55, 75, 79, 0.2);
 }
 
 .slide {
@@ -194,10 +197,6 @@ html {
     content: "";
     display: table;
     clear: both;
-}
-
-.slide:first-child .txt-wrapper span.copy {
-    opacity: 1;
 }
 
 .slide:nth-child(odd) .img {
@@ -271,7 +270,6 @@ span.copy {
 }
 
 .txt-wrapper h2 {
-    margin: 0;
     font-size: 4.3rem;
     margin-bottom: 4rem;
     font-weight: 600;
@@ -280,6 +278,7 @@ span.copy {
 
 .txt-wrapper h2 span {
     display: block;
+    color: #ccc;
 }
 
 .txt-wrapper h3 {
@@ -290,10 +289,6 @@ span.copy {
     line-height: 1;
 }
 
-.txt-wrapper h2 span {
-    color: #ccc;
-}
-
 .txt-wrapper a {
     text-decoration: none;
     color: #aeacab;
@@ -302,24 +297,32 @@ span.copy {
 button {
     position: relative;
     padding: 1rem 3.5rem;
-    color: white;
+    color: #fff;
+    background: var(--color-Messi);
     text-align: center;
     display: block;
-    border-radius: 3rem;
-    background: var(--color-Messi);
+    border-radius: 2rem;
     text-transform: uppercase;
     border: none;
     font-size: 1rem;
     margin-top: 3rem;
     outline: none;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    transition: ease-in-out 0.3s;
+    letter-spacing: 0.2rem;
+}
+
+button:hover {
+    color: var(--color-Messi);
+    background: #fff;
+    font-weight: 600;
 }
 
 .phone {
     display: block;
     color: black;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
 }
 
 .subtitle {
@@ -334,13 +337,18 @@ button {
 
 p.excerpt {
     margin: 0;
-    color: #aeacab;
+    color: var(--Messi-Subtitle);
     font-size: 1.2rem;
     line-height: 1.5;
 }
 
 span.view-all {
-    color: #aeacab;
+    color: var(--Messi-Subtitle);
+    cursor: pointer;
+}
+
+span.view-all:hover {
+    color: var(--Messi-Bg);
 }
 
 .slider-container .slide-content img {
@@ -371,7 +379,7 @@ ul li::after {
 .date-wrapper {
     width: 20%;
     float: left;
-    color: #aeacab;
+    color: var(--Messi-Subtitle);
     text-align: left;
 }
 
@@ -406,7 +414,7 @@ ul li::after {
 
 .post-info {
     display: block;
-    color: #aeacab;
+    color: var(--Messi-Subtitle);
     font-size: 1rem;
 }
 
@@ -458,7 +466,6 @@ ul li::after {
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
 .social-wrapper li,
@@ -467,7 +474,6 @@ ul li::after {
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.5rem;
-
 }
 
 .social-wrapper a,
@@ -482,5 +488,4 @@ ul li::after {
 
 .language-wrapper {
     float: right;
-
 }

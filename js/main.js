@@ -82,6 +82,7 @@ down.on("click", function () {
     moveDown(currentSlide);
     hideNav();
 });
+
 up.on("click", function () {
     var currentSlide = $(".active");
     moveUp(currentSlide);
